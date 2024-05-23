@@ -23,7 +23,7 @@ header{
 }
 header .name{
     color:white;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Courier New', Courier, monospace ;
     position: absolute; 
     list-style: none;
     display: flex;
@@ -155,7 +155,8 @@ footer{
         font-size: 1.4em;
     }
     .navbar li{
-        font-size:0.8em;
+        font-size:0.6em;
+        font-weight: 600;
     }
     .sample p{
         font-size: 0.6em;
