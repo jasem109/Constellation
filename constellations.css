@@ -1,0 +1,163 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    width:100%;
+    display:grid;
+    grid-template-rows: 35vh  auto  auto auto;
+    grid-template-columns:10% 55% 25% 10% ;
+    grid-template-areas: "header header header header"
+    ". navbar navbar ."
+    "main main main main"
+    "footer footer footer footer";
+}
+
+header .name{
+    color:white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute; 
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    font-size: 2em;
+    margin-top:100px;
+}
+
+header img{
+    width:100vw;
+    height:50vh;
+    filter:blur(1.5px);
+    margin-top:-10vh;
+
+}
+
+header{
+    grid-area:header;
+    display:flex;
+    justify-content: center;
+    
+}
+
+.nav{
+    grid-area:navbar;
+    background-color: blue;
+    padding:20px;
+    margin-top:-80px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 10;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.main{
+    grid-area:main;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap:30px;
+
+}
+
+.detail{
+    display:grid;
+    grid-template-columns:50px 220px;
+    grid-template-rows:30px 20px ;
+    grid-template-areas: "img name" "img mail";
+    box-shadow: 1px 1px 2px 1px rgb(64, 63, 63);
+    padding:10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    
+}
+
+.detail a{
+    text-decoration: none;
+    color:rgb(12, 12, 12);
+}
+
+
+.detail:hover{
+    background-color: black;
+    
+    .mail{
+        color:white;
+    }
+   
+}
+.name_:hover{
+    background-color: rgb(244, 243, 245);
+}
+.logo{
+    grid-area: img;
+}
+.logo img{
+    height:60px;
+    width:90%;
+}
+.name_{
+    grid-area:name;
+    padding: 4px;
+    background-color: aqua;
+    border-radius: 4px;
+}
+.mail{
+    grid-area:mail;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+footer{
+    grid-area:footer;
+    padding: 40px;
+    text-align: center;
+    background-color: rgb(1, 1, 32);
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top:20px;
+}
+.contact-via{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color:rgb(64, 63, 63);
+    gap:20px;
+}
+.copyright{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(92, 21, 21);
+}
+.contact{
+    list-style: none;
+    text-align: left;
+    margin-top:20px;
+    margin-bottom:30px;
+}
+.contact .name{
+    margin-bottom:15px;
+    color:aqua;
+}
+
+.location{
+    text-align: left;
+    margin-top:20px;
+    margin-bottom:30px;
+}
+.location p{
+    color:aqua;
+    margin-bottom:15px;
+}
+.total, .total-zilla , .total-boy, .total-girls{
+    text-align: center;
+}
+
+@media only screen and (max-width: 800px){
+  header .name{
+    font-size: 1em;
+    gap:12px;
+  }
+
+}
+
