@@ -1,8 +1,10 @@
 *{
     margin:0px;
     padding:0px;
+
 }
 body{
+    overflow-x: hidden;
     display:grid;
     grid-template-columns: [page-start] 5vw [nav-start] 90vw [nav-end] 5vw [page-end] ;
     grid-template-rows: [head-start] 20vh [navi-start] 50px [head-end] 50px [navi-end] auto [ban-end] auto [eng-end] auto [foot-end];
@@ -41,16 +43,65 @@ header{
 .literature-ban{
     grid-column:page-start/page-end;
     grid-row:navi-end/ban-end;
-    display:grid;
-    grid-template-columns: [lit-start]8vw [content-start] 40vw[content-mid] 40vw[content-end] 8vw [lit-end];
-    grid-template-rows:auto;
-    gap:20px;
-    justify-content:space-around;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:15px;
+    justify-content:center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.ban-design{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width:300px;
+    border-radius: 4px;
+    box-shadow: 0 0 2px black;
+    overflow: hidden;
+
+
+}
+.heading h1{
+    margin-top:10px;
+    color:rgb(2, 31, 31);
+    padding:10px;
+    font-size: 1em;;
+}
+.design{
+    display:flex;
+    width:200px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transform: rotate(45deg);
+    gap:27px;
+}
+.bar-1{
+    height:200px;
+    width:40px;
+    background-color: blue;
+    margin-top:auto;
+    margin-bottom:auto;
+
+}
+.bar-2{
+    height:400px;
+    width:40px;
+    background-color: red;
+}
+
+.bar-3{
+    height:230px;
+    width:40px;
+    background-color: blue;
+    margin-top:5.199px;
+    transform: rotate(90deg);
+
 }
 .bn-1{
-    grid-column: content-start/content-mid;
-    margin:40px 0px 40px 0;
+    
     box-shadow: 0 0 2px black;
     padding:10px;
     border-radius: 4px;
@@ -63,17 +114,19 @@ header{
 }
 
 .bn-2{
-    grid-column: content-mid/content-end;
-    margin:40px 0px 40px 0;
+    width:400px;
     box-shadow: 0 0 2px black;
     padding:10px;
     border-radius: 4px;
+    text-align: center;
     h1{
         margin-bottom: 3px;
         text-align: center;
     }
     background-color: rgba(250, 235, 215, 0.5);
+
 }
+
 
 
 footer{
@@ -82,18 +135,19 @@ footer{
     text-align: center;
     padding: 4vh;
     background-color:rgb(12, 1, 34) ;
-    color:white;
+    color:rgb(92, 21, 21);
     margin-top:40px;
     
 }
 
 @media only screen and (max-width: 600px){
-    .bn-1,.bn-2{
-        grid-column: content-start/content-end;
-        margin:20px 10px 0px 0;
+    .bn-1,.bn-2, .ban-design{
+        
+        width:300px;
         box-shadow: 0 0 2px black;
         padding:10px;
         border-radius: 4px;
+    
         h1{
             margin-bottom: 3px;
         }
