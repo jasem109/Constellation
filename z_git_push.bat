@@ -1,3 +1,4 @@
-git add --all
-git commit -m "."
-git push
+git add .
+git status
+git commit -m "something changes"
+git push origin main
