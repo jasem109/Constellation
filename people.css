@@ -6,7 +6,7 @@
 body{
     display:grid;
     grid-template-columns: 100%;
-    grid-template-rows: 35vh auto auto auto;
+    grid-template-rows: 35vh auto 50vh auto;
     grid-template-areas: "head" "line" "info" "footer";
 }
 
@@ -30,7 +30,7 @@ header h1{
 }
 .line{
     grid-area: line;
-    background-color: rgb(42, 41, 41);
+    background-color: rgb(1, 1, 32);
     padding:20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 600;
@@ -75,8 +75,9 @@ header h1{
 }
 footer{
     grid-area: footer;
-    bottom:0%;
-    background-color: rgb(42, 41, 41);
-    padding: 24px;
+    background-color: rgb(1, 1, 32);
+    padding: 20px;
+    color:rgb(92, 21, 21);
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
