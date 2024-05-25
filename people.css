@@ -6,7 +6,7 @@
 body{
     display:grid;
     grid-template-columns: 100%;
-    grid-template-rows: 35vh auto 50vh auto;
+    grid-template-rows: 35vh auto auto auto;
     grid-template-areas: "head" "line" "info" "footer";
 }
 
@@ -75,7 +75,7 @@ header h1{
 }
 footer{
     grid-area: footer;
-    background-color: rgb(1, 1, 32);
+    background-color: rgb(1, 1, 32,0);
     padding: 20px;
     color:rgb(92, 21, 21);
     text-align: center;
