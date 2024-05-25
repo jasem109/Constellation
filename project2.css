@@ -6,13 +6,15 @@ body{
     width:100%;
     display:grid;
     grid-template-rows: 35vh auto auto auto auto;
-    grid-template-columns:5% 60% 30% 5% ;
+    grid-template-columns:5% 35% 55% 5% ;
     grid-template-areas: "header header header header"
     "navbar navbar navbar navbar"
-    ". intro  intro ."
+    ". picture  intro ."
     ". shortcut shortcut ."
     "footer footer footer footer";
 }
+
+
 
 
 header{
@@ -42,25 +44,48 @@ header img{
 }
 .navbar{
     grid-area:navbar;
-    height:20px;
+    height:40px;
     background-color: rgb(40, 41, 38);
 }
 
 
+.picture{
+    margin-top:90px;
+    grid-area: picture;
+    img{
+        width:30vw;
+        height:36vh;
+        
+        border-radius: 4px;
 
+    }
+}
 .intro{
     grid-area:intro;
-    margin: 0 20px 20px 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width:55vw;
+    margin: 80px 40px 20px -50px;
+    font-family:'Courier New', Courier, monospace;
     font-size: 1em;
-    box-shadow: 1px 1px 3px 1px rgb(1, 1, 32);
     padding:10px;
     margin-bottom:auto;
 }
 .intro h1{
     margin-bottom:10px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Courier New', Courier, monospace;
     color:brown;
+}
+
+@media only screen and (max-width: 1000px) {
+    .intro p{
+        font-size:0.8em;
+        font-weight: 500;
+    }
+    .intro h1{
+        font-size:1.2em;
+    }
+    .intro{
+        margin-left:0;
+    }
 }
 .shortcut{
     grid-area:shortcut;
@@ -297,6 +322,24 @@ footer{
 }
 
 @media only screen and (max-width: 700px) {
+    .picture{
+        margin-top: 20px;
+    }
+
+   .picture img{
+    height:200px;
+    width:90vw;
+   }
+
+   .intro{
+    margin:230px -38vw ;
+    width:93vw;
+   }
+   .intro p{
+    font-weight: 500;
+   }
+
+
     header .name {
     font-size:1.5em;
     gap:12px;
@@ -325,7 +368,7 @@ footer{
     .shortcut{
         grid-area:shortcut;
         height:500px;
-        margin-top:110px;
+        margin-top:-150px;
         display:grid;
         grid-template-columns:25% 25% 25% 25%;
         grid-template-rows:60px 70px 10px 70px 180px 70px 60px;
