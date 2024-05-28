@@ -44,7 +44,7 @@ header{
     grid-area:navbar;
     background-color: rgba(236, 231, 231, 0.1);
     backdrop-filter: blur(20px);
-    border-radius: 10px;
+    border-radius: 4px;
     box-shadow: 0 0 5px;
     padding:20px;
     gap:5px;
